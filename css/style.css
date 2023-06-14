@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --white-para: hsla(0, 0%, 100%, 0.75);
+    --gray-bg-head-but: hsl(0, 0%, 95%);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    max-height: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--gray-bg-head-but);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+}
+
+.card {
+    padding: 3rem;
+}
+
+.card h1 {
+
+    font-size: 2.3rem;
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+.card p {
+    width: 90%;
+    font-size: .85rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+    margin-bottom: 5rem;
+}
+
+.card button {
+    font-size: .9rem;
+    background: var(--gray-bg-head-but);
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    outline: none;
+    padding: .7rem 1.5rem;
+}
+
+.card button:hover {
+    color: rgb(235, 230, 230) !important;
+    background-color: transparent;
+    border: 2px solid rgb(235, 230, 230);
+    cursor: pointer;
+}
+
+.card-1 {
+    background: var(--bright-orange);
+    border-radius: .6rem 0 0 .6rem;
+
+    .btn-1 {
+        color: var(--bright-orange);
+    }
+}
+
+.card-2 {
+    background: var(--dark-cyan);
+
+    .btn-2 {
+        color: var(--dark-cyan);
+    }
+}
+
+.card-3 {
+    background: var(--very-dark-cyan);
+    border-radius: 0 .6rem .6rem 0;
+
+    .btn-3 {
+        color: var(--very-dark-cyan);
+    }
+}
+
+
+@media (max-width:768px) {
+    .container {
+        height: 100%;
+        padding: 2rem;
+    }
+
+    .card p {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-1 {
+        border-radius: .6rem .6rem 0 0;
+    }
+
+    .card-3 {
+        border-radius: 0 0 .6rem .6rem;
+    }
+}
